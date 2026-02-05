@@ -4,13 +4,13 @@ import {Body} from "./Components/Body/Body.tsx";
 
 function App() {
 
-  return (
-      <AppShell>
-        <AppShell.Main>
-          <Body/>
-        </AppShell.Main>
-      </AppShell>
-  )
+    return (
+        <AppShell>
+            <AppShell.Main>
+                <Body/>
+            </AppShell.Main>
+        </AppShell>
+    )
 }
 
 export default App
