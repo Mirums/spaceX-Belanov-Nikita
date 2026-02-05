@@ -1,13 +1,15 @@
 import './App.css'
-import {Button, Container, Title} from "@mantine/core";
+import {AppShell} from "@mantine/core";
+import {Body} from "./Components/Body/Body.tsx";
 
 function App() {
 
   return (
-    <Container>
-        <Title order={1}>Skibidi Gang</Title>
-        <Button>Кнопка</Button>
-    </Container>
+      <AppShell>
+        <AppShell.Main>
+          <Body/>
+        </AppShell.Main>
+      </AppShell>
   )
 }
 
