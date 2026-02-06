@@ -12,12 +12,12 @@ type Launch = {
     rocket: {
         rocket_name: string;
     };
-    details: {
-        details: string;
-    }
+    details: string | null;
 };
+type Action =
+    | { type: 'get_launches'; payload: Launch[]};
 
-function reducer(state, action) {
+function reducer(state: Launch[], action: Action): Launch[] {
     switch (action.type) {
         case 'get_launches': {
             return action.payload;

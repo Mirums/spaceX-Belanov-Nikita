@@ -7,7 +7,7 @@ type ModalWindowProp = {
     bigImage: string | null;
     missionName: string;
     rocketName: string;
-    details: string;
+    details: string | null;
 }
 
 export function ModalWindow({open, close, bigImage, details, rocketName, missionName}: ModalWindowProp) {

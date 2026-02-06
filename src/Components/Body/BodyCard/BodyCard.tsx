@@ -7,10 +7,12 @@ type BodyCardProps = {
     bigImage: string | null;
     missionName: string;
     rocketName: string;
-    details: string;
+    details: string | null;
 }
-
-function reducer(state, action) {
+type Action =
+    | { type: 'open_modal'}
+    | { type: 'close_modal'}
+function reducer(state: boolean, action: Action): boolean {
     switch (action.type) {
         case 'open_modal': {
             return state = true;
