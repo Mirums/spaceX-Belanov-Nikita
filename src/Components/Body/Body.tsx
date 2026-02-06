@@ -7,10 +7,14 @@ type Launch = {
     mission_name: string;
     links: {
         mission_patch_small: string | null;
+        mission_patch: string | null;
     };
     rocket: {
         rocket_name: string;
     };
+    details: {
+        details: string;
+    }
 };
 
 function reducer(state, action) {
@@ -51,9 +55,12 @@ export function Body() {
             {state.map((launch) => (
                 <BodyCard
                     key={launch.mission_name}
-                    image={launch.links?.mission_patch_small || ''}
+                    littleImage={launch.links?.mission_patch_small || ''}
                     missionName={launch.mission_name}
-                    rocketName={launch.rocket?.rocket_name}/>
+                    rocketName={launch.rocket?.rocket_name}
+                    bigImage={launch.links?.mission_patch}
+                    details={launch.details}
+                />
             ))}
         </Flex>
     </>
